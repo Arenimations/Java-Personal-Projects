@@ -1,0 +1,62 @@
+import java.util.*;
+public class Marbles {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner keyboard = new Scanner(System.in);
+		
+		System.out.println("Please enter the color of the marble.\n'r' for red, 'y' for yellow, 'b' for blue, and 'q' to quit: ");
+		char answer = keyboard.nextLine().charAt(0);
+		int r = 0, y = 0, b = 0;
+
+
+		while((answer != 'q') || (answer != 'Q'))
+			{
+			if ((answer == 'r') || (answer == 'R'))
+			{
+				r++;
+			}
+			else if ((answer == 'y') || (answer == 'Y'))
+			{
+				y++; 
+			}
+			else if ((answer == 'b') || (answer == 'B'))
+			{
+				b++;  
+			}
+			else if ((answer == 'q') || (answer == 'Q'))
+			{
+				break;
+			}
+			else
+			{
+				System.out.println("That is an invalid key. Please type the correct letter.");  
+			}
+				System.out.println("Please enter the color of the marble.\n'r' for red, 'y' for yellow, 'b' for blue, and 'q' to quit: ");
+				answer = keyboard.nextLine().charAt(0);
+			}
+
+		keyboard.close();
+		System.out.println("There are a total of " + (r+y+b) + " marbles.\nThere are " + r + " red marbles, " + y + " yellow marbles, and " + b + " blue marbles.");
+		if ((r > y) && (r > b))
+			{
+			System.out.println("Red has the most marbles.");  
+			}
+		else if ((y > r) && (y > b))
+			{
+			System.out.println("Yellow has the most marbles.");  
+			}
+		else if ((b > y) && (b > r))
+			{
+			System.out.println("Blue has the most marbles.");  
+			}
+		else
+			{
+			System.out.println("The number of marbles for each color is equal. It is a tie.");  
+			}
+		
+		
+		
+	}
+
+}
