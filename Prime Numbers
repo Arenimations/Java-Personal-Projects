@@ -1,0 +1,51 @@
+import java.util.*;
+public class prime {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner keyboard = new Scanner(System.in);
+		
+		System.out.print("How many prime numbers would you like? ");
+		int i = keyboard.nextInt();
+		keyboard.close();
+		int count = 0;
+		int n = 0;
+		
+		
+		do 
+		{
+			if(isPrime(n))
+			{
+				System.out.println(n);
+				n++;
+				count++;
+			}
+			
+			else
+			{
+				n++;
+			}
+		}
+		while(count < i);
+			
+	}
+
+	
+	public static boolean isPrime(int n)
+	{
+		if ((n == 0) || (n == 1))
+			return false;
+		
+		int m = 2;
+		
+		while (m < n)
+			{
+				if(n % m == 0)
+					return false;
+					m++;
+			}
+		return true;	
+	}
+
+	
+}
